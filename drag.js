@@ -9,6 +9,10 @@ function drag(id){
 			obj.style.left = e.pageX - disX + 'px';
 			obj.style.top = e.pageY - disY + 'px';
 		}
+		document.onmouseup = function(){
+			document.onmousemove = null;
+			document.onmouseup = null;
+		}
 		return false;
 	}
 }
