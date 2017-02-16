@@ -5,6 +5,10 @@ function drag(id){
 			disY = 0;
 		disX = e.pageX - obj.offsetLeft;
 		disY = e.pageY - obj.offsetTop;
+		document.onmousemove = function(e){
+			obj.style.left = e.pageX - disX + 'px';
+			obj.style.top = e.pageY - disY + 'px';
+		}
 		return false;
 	}
 }
